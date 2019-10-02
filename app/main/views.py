@@ -3,6 +3,7 @@ from . import main
 from ..models import User
 from .forms import UpdateProfile
 from .. import db, photos
+from flask_login import login_required, current_user
 
 @main.route('/')
 def index():
