@@ -1,5 +1,6 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 <link href="https://fonts.googleapis.com/css?family=Bangers|Berkshire+Swash|Ranga&display=swap" rel="stylesheet">
-<div style="font-family: 'Berkshire Swash'" class="navbar navbar-inverse" role="navigation">
+<div  class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
       <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -8,11 +9,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/"> RWAGASABO TOUR </a>
+          <a class="navbar-brand" style="font-family: 'Berkshire Swash'" href="/"> RWAGASABO TOUR </a>
       </div>
-      <div  class="navbar-collapse collapse">
+      <div  class="navbar-collapse collapse"id="navbarNavDropdown">
           <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Dropdown link
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <a style="color: black" class="dropdown-item" href="#">SAFARI Tours</a>
+                          <a  style="color: black"class="dropdown-item" href="#">KIZINGA Tours</a>
+                          <a  style="color: black"class="dropdown-item" href="#">AMAHORO Tours</a>
+                          <a  style="color: black"class="dropdown-item" href="#">Thousand Hills Expeditions</a>
+                        </div>
+                      </li>
               </ul>
               
                    
@@ -20,3 +37,4 @@
      
   </div>
 </div>
+</nav>
