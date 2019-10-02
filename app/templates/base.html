@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        {% extends 'bootstrap/base.html'%} {%block styles %} {{super()}}
+        <!--Importing the simple mde css and js files  -->
+        {{ simplemde.css}} {{ simplemde.js }} {% endblock %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RWAGASABO TOUR</title>
 </head>
 <body>
-        {% extends 'bootstrap/base.html'%}
 
         <!-- Navbar block  --> 
         {% block navbar %}
@@ -16,6 +18,5 @@
         
 </body>
 </html>
-
 
 
