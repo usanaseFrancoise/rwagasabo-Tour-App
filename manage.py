@@ -13,7 +13,16 @@ manager.add_command('run',Server(use_debugger=True))
 
 manager.shell
 def make_shell_context():
-    return dict(app = app,db = db,User = User)
+    return dict(app = app,db = db,User = User, Comment = Comment, Booking = Booking, Location = Location)
+
+@manager.command
+def test():
+    '''
+    run the unit tests.
+    '''
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
 if __name__ == '__main__':
     manager.run()

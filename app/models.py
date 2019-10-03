@@ -49,12 +49,12 @@ class Comment(db.Model):
     def save_comment(self):
         db.session.add(self)
         db.session.commit()
-  @classmethod
-  def get_comments(cls,user_id):
-      comments=Comment.query.filter_by(user_id=id).all()
-      return comments
-  def __repr__(self):
-      return f'comment{self.comment}'
+    @classmethod
+    def get_comments(cls,user_id):
+        comments=Comment.query.filter_by(user_id=id).all()
+        return comments
+    def __repr__(self):
+        return f'comment{self.comment}'
   
 class Booking(db.Model):
     __tablename__='bookings'
@@ -71,12 +71,15 @@ class Booking(db.Model):
   
 class Location(db.Model):
     __tablename__='locations'
+    
     id=db.Column(db.Integer,primary_key=True)
     name=db.Column(db.String(255),nullable = False)
     description=db.Column(db.String(255),nullable = False)
     user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+    
     def save_location(self):
         db.session.add(self)
         db.session.commit()
+        
     def __repr__(self):
         return f'Location{self.name}'
