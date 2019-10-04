@@ -1,5 +1,5 @@
 # rwagasabo-Tour-App
-- this is a website that is specifically made for tourist  for finding the preferable company to work with while travelling.by anybody who wants to search you type username and click "enter key".
+- this is a website that is specifically made for tourist  for finding the preferable company to work with while travelling.by anybody who wants to BOOK and click "Book Now".
 Description
 <img src="https://ktpress.rw/wp-content/uploads/2017/06/Rwiza-village-Karongi.jpg">
 
