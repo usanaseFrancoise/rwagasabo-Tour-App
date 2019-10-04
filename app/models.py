@@ -91,6 +91,7 @@ class Booking(db.Model):
    id=db.Column(db.Integer,primary_key=True)
    types=db.Column(db.String(255),nullable = False)
    name=db.Column(db.String(255),nullable = False)
+   loc_name=db.Column(db.String(255),nullable = False)
    # date=calendar.calendar(2018, 2, 1, 6)
    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
    def save_booking(self):
@@ -99,12 +100,26 @@ class Booking(db.Model):
    def __repr__(self):
        return f'Booking{self.type}'
 
+# class Location(db.Model):
+#    __tablename__='locations'
+#    id=db.Column(db.Integer,primary_key=True)
+#    name=db.Column(db.String(255),nullable = False)
+#    description=db.Column(db.String(255),nullable = False)
+#    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+#    def save_location(self):
+#        db.session.add(self)
+#        db.session.commit()
+#    def __repr__(self):
+#        return f'Location{self.name}'
+
+
 class Location(db.Model):
    __tablename__='locations'
    id=db.Column(db.Integer,primary_key=True)
    name=db.Column(db.String(255),nullable = False)
    description=db.Column(db.String(255),nullable = False)
    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
+   picture_path=db.Column(db.String(255))
    def save_location(self):
        db.session.add(self)
        db.session.commit()

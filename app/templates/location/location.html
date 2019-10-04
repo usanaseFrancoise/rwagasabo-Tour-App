@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf%}
+{% block content %}
+<div class="container" >
+       <div class="jumbotron">
+       <div class="col-md-8" id="postform">
+           <h2 class="text-center">Location</h2>
+           {{wtf.quick_form(form)}}
+       </div>
+   </div>
+</div>
+<div class="card-img" >
+   <div class="row">
+       {% for l in location %}
+       <h2>{{l.name}}</h2>
+       <img src="{{url_for('static',filename=l.picture_path)}}" style="height:300px;border-radius: 1%" class="card-img" alt="woman">
+       <p>{{l.description}}</p>
+   </div>
+   <div class=col-md-4>
+   <div class=col-md-4>
+   </div>
+       {% endfor %}
+   </div>
+</div>
+{% endblock %}

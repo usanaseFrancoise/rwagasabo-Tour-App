@@ -31,13 +31,12 @@ def create_app(config_name):
     mail.init_app(app)
     simple.init_app(app)
     db.init_app(app)
+    configure_uploads(app,photos)
 
     # Registering the blueprint
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
-
-    # configure UploadSet
-    configure_uploads(app,photos)
+    # configure UploadSe
     
     from .auth import auth as auth_blueprint
     app.register_blueprint(auth_blueprint,url_prefix = '/authenticate')

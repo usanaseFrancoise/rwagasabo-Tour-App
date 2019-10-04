@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/clarisse/Documents/moringa-school-projects/Python/rwagasabo-Tour-App/virtual"
+set -gx VIRTUAL_ENV "/home/fanny/Documents/rwagasabo-Tour-App/virtual"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

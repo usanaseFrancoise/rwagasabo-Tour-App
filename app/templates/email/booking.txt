@@ -1,0 +1,3 @@
+Hello {{user.username}},
+Welcome to Rwagasabo Tour
+We have just seen you booked for our services  and want to welcome you to the family. Please enjoy your journey.

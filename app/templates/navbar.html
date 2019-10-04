@@ -21,10 +21,11 @@
               <li class="nav-item">
                   <a class="nav-link" href="{{url_for('main.About')}}" style="color: white;font-weight: bold">About</a>
                 </li>
-                <li class="nav-item dropdown">
-                        <a style="color: white;font-weight: bold"class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          COMPANIES
-                        </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('main.locatn')}}" style="color: white;font-weight: bold">suggest Location</a>
+                  </li>
+                <!-- <li class="nav-item dropdown">
+                        
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                           
                             <a style="color: black;font-weight: bold"class="dropdown-item" href="#">SAFARI Tours<br></a>
@@ -35,20 +36,21 @@
                            
                           <a style="color: black;font-weight: bold"class="dropdown-item" href="#">Jallyna Tour</a>
                         </div>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link"><button style="margin-left: 680px;color: rgb(38, 47, 75)"  class="btn btn-outline-success my-2 my-sm-0" type="submit">BOOK NOW</button></a>
-              
-                      </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+                      </li> -->class="nav navbar-nav navbar-right">
                       {% if current_user.is_authenticated %}
-                      <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-                      <li><a href="{{url_for('auth.logout')}}">Sign out</a></li>
+                      <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color: white;font-weight:bold">Profile</a></li>
+                      <li><a href="{{url_for('auth.logout')}}" style="color: white;font-weight:bold">Sign out</a></li>
                       {% else %}
                       <li><a  style="font-weight: bold" href="{{url_for('auth.login')}}">Sign in</a></li>
                       {%endif%}
-                  </ul>
+                    
+                    </ul>
+                      <li  class="nav-item">
+                      <a class="nav-link" href="{{url_for('main.new_book')}}"><button  style="margin-left: 1000px;color: rgb(38, 47, 75);"  class="btn btn-outline-success my-2 my-sm-0" type="submit">BOOK NOW</button></a><br>
+                      <br><a class="nav-link" href="{{url_for('main.comment')}}"><button  style="margin-left: 1020px;color: rgb(38, 47, 75)"  class="btn btn-outline-success my-2 my-sm-0" type="submit">COMMENT</button></a>
+                      </li>
+                    
+                    
              
       </div>
       
