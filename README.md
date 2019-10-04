@@ -1,7 +1,7 @@
 # rwagasabo-Tour-App
 - this is a website that is specifically made for tourist  for finding the preferable company to work with while travelling.by anybody who wants to search you type username and click "enter key".
 Description
-<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiIy4nEloLlAhWImuAKHfKNAN4QjRx6BAgBEAQ&url=https%3A%2F%2Fktpress.rw%2F2017%2F06%2Frwanda-makes-it-easy-to-process-tourism-operating-licenses-online%2F&psig=AOvVaw0ZB_9ZrejI_Tig3Rbh4mBB&ust=1570263730955092">
+<img src="https://ktpress.rw/wp-content/uploads/2017/06/Rwiza-village-Karongi.jpg">
 
 
 
@@ -17,7 +17,7 @@ Description
 they are navigation bar cotaining the name of APP and more about information of RWAGASABO ,And also before  booking
 a user must  create an account and login the system and be able to BOOK  the company
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPbm6ckr0MxiuGS5TvoulYCNJCATjXmGrKnsQQ9RV0HYYQKi-l">
+<img src="https://www.rwandagorilla.com/wp-content/uploads/2017/10/Bisate-Lodge-1.jpg">
 
 
 - name:RWAGASABO-Tour-App
