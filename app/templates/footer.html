@@ -1,46 +1,31 @@
-{% extends 'base.html'%}
-{% import 'bootstrap/wtf.html' as wtf%}
-{% block content %}
-<br>
-<br>
-     
-   <div class="container" id="allcomments"  style="color: white;background-color:black;opacity:0.8;width: 50%">
-       <div class="row">
-               {% if all_comments %}
-               <div class="col-md-7">
-                       <h3 class="text-center" id="coms"> All comment</h3>
-                       {% for comment in all_comments %}
-                       <div class="card w-90 mb-3">
-                           <div class="card-body">
-                           <p class="card-title">{{comment.comment }}</p>
-                           <p class="card-text">{{comment.users.username }}</p>
-                           <hr>
-                       </div>
-                   </div>
-                   {% endfor %}
-               </div>
-               <div class="col-md-5 commentform">
-                       {{wtf.quick_form(form)}}
-                   </div>
-               </div>
-           {%else%}
-           <div class="card w-90 mb-3">
-                   <div class="card-body">
-                           <p class="card-title"> No Comments for this yet. be the first to comment</p>
-                       </div>
-
-           </div>
-           <div class="col-md-5 ">
-                {{wtf.quick_form(form)}}
-            </div>
-               {% endif %}
-           </div>
-           <br>
-           <br>
-
-<footer style=" font-family:' Berkshire Swash';color: white;background-color:black;opacity:0.8">
- 
-
+<footer style="background-color: rgb(38, 47, 75)">
+        <div class="container" id="allcomments">
+            <div class="row">
+                    {% if all_comments %}
+                    <div class="col-md-7">
+                            <h3 class="text-center" id="coms"> All comment</h3>
+                            {% for comment in all_comments %}
+                            <div class="card w-90 mb-3">
+                                <div class="card-body">
+                                <p class="card-title">{{comment.comment }}</p>
+                                <p class="card-text">---{{comment.users.username }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-md-5 commentform">
+                            {{wtf.quick_form(form)}}
+                        </div>
+                    </div>
+                {%else%}
+                <div class="card w-90 mb-3">
+                        <div class="card-body">
+                                <p class="card-title"> No Comments for this yet. be the first to comment</p>
+                            </div>
+                </div>
+                    {% endif %}
+                </div>
+    
         <div style="color: black">
           <div class="container">
       
@@ -49,10 +34,7 @@
       
               <!-- Grid column -->
               <div class="col-md-6 col-lg-56text-center text-md-left mb-4 mb-md-0">
-                <h6 style="margin-left:260px;color: white;font-family:' Berkshire Swash';text-align: center;font-size: 23px">Get connected with us through!</h6>
-                <hr style="width: 15%;margin-left: 73%">
-               
-            
+                <h6 style="margin-left:330px;color: white">Get connected with us through!</h6>
               </div>
               <!-- Grid column -->
       
@@ -134,11 +116,10 @@
             <div class="col-md-3 col-lg-4 col-xl-4 mb-4">
       
               <!-- Content -->
-              <h6 style="color: white; text-align: center ;font-family:' Berkshire Swash'; font-size: 23px">RWAGASABO-Tour-APP</h6>
-              <hr  style="width: 60px;margin-left: 35%">
+              <h6 style="color: white">RWAGASABO-Tour-APP</h6>
+              <hr  style="width: 60px">
               <p style="color:white">Here you can use the information above to book and reach on us through the social media below to organize activities
                   we really appreciate for guiding us.</p>
-                  <br><a class="nav-link" href="{{url_for('main.comment')}}"><button  style="margin-left: 60px;color: rgb(38, 47, 75)"  class="btn btn-success" type="submit">COMMENT</button></a>
       
             </div>
             <!-- Grid column -->
@@ -147,8 +128,8 @@
             <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
       
               <!-- Links -->
-              <h6 style="color: white;text-align: center ;font-family:' Berkshire Swash'; font-size: 23px">Products</h6>
-              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;margin-left: 40%">
+              <h6 style="color: white">Products</h6>
+              <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
               <p>
                 <a class="dark-grey-text" style="color: white">SAFARI Tour</a>
               </p>
@@ -173,8 +154,8 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
       
               <!-- Links -->
-              <h6 style="color: white;text-align: center ;font-family:' Berkshire Swash'; font-size: 23px">Contact</h6>
-              <hr style="width: 60px;margin-left: 40%">
+              <h6 style="color: white">Contact</h6>
+              <hr style="width: 60px;">
               <p>
                 <i class="fas fa-home mr-3" style="color: white">KIGALI, KG.703, Rda</i> 
             </p>
@@ -203,4 +184,3 @@
         <!-- Copyright -->
       
       </footer>
-{% endblock%}

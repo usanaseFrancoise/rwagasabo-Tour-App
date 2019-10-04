@@ -36,9 +36,9 @@
                            
                           <a style="color: black;font-weight: bold"class="dropdown-item" href="#">Jallyna Tour</a>
                         </div>
-                      </li> -->class="nav navbar-nav navbar-right">
+                      </li> -->
                       {% if current_user.is_authenticated %}
-                      <li><a href="{{url_for('main.profile',uname=current_user.username)}}" style="color: white;font-weight:bold">Profile</a></li>
+
                       <li><a href="{{url_for('auth.logout')}}" style="color: white;font-weight:bold">Sign out</a></li>
                       {% else %}
                       <li><a  style="font-weight: bold" href="{{url_for('auth.login')}}">Sign in</a></li>
@@ -47,7 +47,7 @@
                     </ul>
                       <li  class="nav-item">
                       <a class="nav-link" href="{{url_for('main.new_book')}}"><button  style="margin-left: 1000px;color: rgb(38, 47, 75);"  class="btn btn-outline-success my-2 my-sm-0" type="submit">BOOK NOW</button></a><br>
-                      <br><a class="nav-link" href="{{url_for('main.comment')}}"><button  style="margin-left: 1020px;color: rgb(38, 47, 75)"  class="btn btn-outline-success my-2 my-sm-0" type="submit">COMMENT</button></a>
+                      
                       </li>
                     
                     

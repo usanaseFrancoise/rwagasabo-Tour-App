@@ -39,7 +39,7 @@
 from .import db, login_manager
 from werkzeug.security import generate_password_hash,check_password_hash
 from flask_login import UserMixin
-import datetime
+from datetime import datetime
 import calendar
 from datetime import datetime
 
@@ -92,7 +92,7 @@ class Booking(db.Model):
    types=db.Column(db.String(255),nullable = False)
    name=db.Column(db.String(255),nullable = False)
    loc_name=db.Column(db.String(255),nullable = False)
-   # date=calendar.calendar(2018, 2, 1, 6)
+   start_date=db.Column(db.DateTime,default=datetime.utcnow)
    user_id=db.Column(db.Integer,db.ForeignKey('users.id'))
    def save_booking(self):
        db.session.add(self)

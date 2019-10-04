@@ -1,25 +1,39 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as wtf%}
 {% block content %}
-<div class="container" >
-       <div class="jumbotron">
+<div class="container" style="color: white;background-color:black;opacity:0.8;width: 50%" >
+       <div class="">
        <div class="col-md-8" id="postform">
            <h2 class="text-center">Location</h2>
            {{wtf.quick_form(form)}}
        </div>
    </div>
 </div>
-<div class="card-img" >
-   <div class="row">
+<br><div>
+<h2 class="w3-center" style="text-align: center;font-family:' Berkshire Swash';">New destination</h2>
+<p style="text-align: center ;font-family:' Berkshire Swash',cursive; font-size: 17px">Rwanda lies just south of the Equator, in the heart of Africa. In the space of a week, it’s possible <br>to experience many highlights thanks to the country’s relatively small <br>size.</p>
+<br>
+<br>
+<hr style="width:50%;margin-left:20%">
+</div>
+<div class="container-fluid">
+   <div class="jumbutron" >
+        
        {% for l in location %}
+       <div class="col-md-2" style="width: 30%;margin-left: 10%"  >
+       <div  style="width: 80%;height:70% ">
        <h2>{{l.name}}</h2>
-       <img src="{{url_for('static',filename=l.picture_path)}}" style="height:300px;border-radius: 1%" class="card-img" alt="woman">
+       <hr>
        <p>{{l.description}}</p>
+       <p><img src="{{url_for('static',filename=l.picture_path)}}" style="height:250px;width:250px;border-radius: 1%" class="card-img" alt="woman"></p>
+       
+    </div>
+ 
    </div>
-   <div class=col-md-4>
-   <div class=col-md-4>
+   <br>
+   
    </div>
        {% endfor %}
+   
    </div>
-</div>
 {% endblock %}

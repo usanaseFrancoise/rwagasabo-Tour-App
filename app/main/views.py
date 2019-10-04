@@ -89,9 +89,10 @@ def new_book():
        types=form.types.data
        name=form.name.data
        loc_name=form.loc_name.data
-       new_booking_object=Booking(types=types,name=name,loc_name=loc_name)
+       start_date=form.start_date.data
+       new_booking_object=Booking(types=types,name=name,loc_name=loc_name,start_date=start_date)
        new_booking_object.save_booking()
-    #    mail_message("Welcome to Rwagasabo Tour","email/booking",user.email,user=user)
+       mail_message("Welcome to Rwagasabo Tour","email/booking",user.email,user=user)
        return redirect(url_for('main.index'))
        flash('successfully booked')
    return render_template('new_book.html',form=form,booking=booking,tembera=tembera,safari=safari,virunga=virunga,akagera_park=akagera_park,volcano=volcano,Nyungwe=Nyungwe)
@@ -127,7 +128,7 @@ def add_pic():
 @main.route('/location/',methods=['POST','GET'])
 def locatn():
    location=Location.query.all()
-   user=User.query.filter_by(username =current_user.username).first()
+#    user=User.query.filter_by(username =current_user.username).first()
    form=LocationForm()
    if form.validate_on_submit():
        name=form.name.data
