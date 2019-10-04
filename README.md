@@ -24,4 +24,4 @@ a user must  create an account and login the system and be able to BOOK  the com
 - Tel:0788494207
 - email:Rwagasabo@gmail.com
 - lincense
-copyright git-search Rwagasabo All Rights Reserved
+copyright  Rwagasabo All Rights Reserved
